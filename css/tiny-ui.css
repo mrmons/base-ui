@@ -1,65 +1,235 @@
 /*
-Error: File to import not found or unreadable: tools/functions.
-       Load paths:
-         Compass::SpriteImporter
-         /Users/mindvalley/Sites/tiny-ui/sass
-         /Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets
-        on line 6 of /Users/mindvalley/Sites/tiny-ui/sass/tiny-ui.scss
+ * Author: @mrmons
+ * Date: 
+ *
+ * Url: https://github.com/mrmons/tiny-ui
+ *
+ */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-1: 
-2: /* Compass *\/
-3: @import "compass/css3";
-4: 
-5: /* Tools *\/
-6: @import "tools/functions";
-7: @import "tools/site-settings";
-8: @import "tools/mixins";
-9: @import "tools/helpers";
-10: 
-11: /* Base *\/
+html, body {
+  height: 100%;
+}
 
-Backtrace:
-/Users/mindvalley/Sites/tiny-ui/sass/tiny-ui.scss:6
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: tools/functions.\A        Load paths:\A          Compass::SpriteImporter\A          /Users/mindvalley/Sites/tiny-ui/sass\A          /Users/mindvalley/.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.3/stylesheets\A         on line 6 of /Users/mindvalley/Sites/tiny-ui/sass/tiny-ui.scss\A \A 1: \A 2: /* Compass */\A 3: @import \"compass/css3\";\A 4: \A 5: /* Tools */\A 6: @import \"tools/functions\";\A 7: @import \"tools/site-settings\";\A 8: @import \"tools/mixins\";\A 9: @import \"tools/helpers\";\A 10: \A 11: /* Base */"; }
+body {
+  margin: 0px;
+  background-color: #27282c;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-wrapper {
+  float: left;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  margin-right: 0%;
+  float: left;
+  background-color: #13a8e0;
+  padding: 1em;
+}
+header:last-child {
+  margin-right: 0;
+}
+
+section {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+section:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.col {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+.col li {
+  width: 8.33333%;
+  margin-right: 0%;
+  float: left;
+}
+.col li:last-child {
+  margin-right: 0;
+}
+
+aside {
+  width: 41.66667%;
+  margin-right: 0%;
+  float: left;
+  background-color: #eeeeee;
+  margin-bottom: 1em;
+}
+aside:last-child {
+  margin-right: 0;
+}
+
+article {
+  width: 58.33333%;
+  margin-right: 0%;
+  float: left;
+  background-color: #eeeeee;
+  margin-bottom: 1em;
+}
+article:last-child {
+  margin-right: 0;
+}
+
+.container-wrapper {
+  height: 100%;
+}
+
+.sidebar, .content {
+  height: 100%;
+  margin: 0px;
+  max-height: none !important;
+}
+
+.sidebar {
+  width: 16.66667%;
+  margin-right: 0%;
+  float: left;
+  background-color: #27282c;
+}
+.sidebar:last-child {
+  margin-right: 0;
+}
+
+.content {
+  width: 83.33333%;
+  margin-right: 0%;
+  float: left;
+  padding: 1em;
+  background-color: white;
+}
+.content:last-child {
+  margin-right: 0;
+}
+.content .content__alpha {
+  width: 50%;
+  margin-right: 0%;
+  float: left;
+  background-color: #ccc;
+}
+.content .content__alpha:last-child {
+  margin-right: 0;
+}
+.content .content__beta {
+  width: 50%;
+  margin-right: 0%;
+  float: left;
+  background-color: #ccc;
+}
+.content .content__beta:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=tiny-ui.css.map */

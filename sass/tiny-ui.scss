@@ -1,28 +1,34 @@
+/*
+ * Author: @mrmons
+ * Date: 
+ *
+ * Url: https://github.com/mrmons/tiny-ui
+ *
+ */
 
-/* Compass */
-@import "compass/css3";
+@charset "UTF-8";
 
-/* Tools */
-@import "tools/functions";
-@import "tools/site-settings";
-@import "tools/mixins";
-@import "tools/helpers";
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400);
+//@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,900);
 
-/* Base */
-@import "base/normalize";
-@import "base/base";
-@import "base/form";
+// Compass
+//--------------------------------------------------------------------
+//@import "compass/css3";
 
-/* Fonts */
-//@import "fonts/...";
+//@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+//@import "../bower_components/neat/app/assets/stylesheets/neat";
 
-/* Layout */
-@import "layout/header";
-@import "layout/nav";
-@import "layout/footer";
-@import "layout/constrained";
+// Componenets
+//--------------------------------------------------------------------
+@import "components/settings";
+@import "components/functions";
+@import "components/clearfix";
+@import "components/validation";
+@import "components/box-sizing";
+@import "components/unit-converter";
+@import "components/grid";
 
-/* Modules */
-@import "modules/btn";
-@import "modules/icons";
-//@import "modules/animations";
+
+// // Assets
+// //--------------------------------------------------------------------
+ @import "assets/base"

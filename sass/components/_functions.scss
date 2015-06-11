@@ -1,0 +1,50 @@
+$parent-columns: $total-columns;
+$fg-column: $total-columns;
+$fg-gutter: $gutter;
+$fg-max-columns: $total-columns;
+//$container-display-table: false !default;
+
+
+
+@function flex-grid($columns, $container-columns: $fg-max-columns) {
+  $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($width / $container-width);
+}
+
+@function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($gutter / $container-width);
+}
+
+@function grid-width($n) {
+  @return $n * $gw-column + ($n - 1) * $gw-gutter;
+}
+
+@function get-parent-columns($columns) {
+  @if $columns != $total-columns {
+    $parent-columns: $columns !global;
+  } @else {
+    $parent-columns: $total-columns !global;
+  }
+
+  @return $parent-columns;
+}
+
+// Parses the first argument of span-columns()
+@function container-span($span: $span) {
+  @if length($span) == 3 {
+    $container-columns: nth($span, 3);
+    @return $container-columns;
+  } @else if length($span) == 2 {
+    $container-columns: nth($span, 2);
+    @return $container-columns;
+  }
+
+  @return $total-columns;
+}
+
+
+// @function is-display-table($container-is-display-table, $display) {
+//   @return $container-is-display-table == true or $display == table;
+// }

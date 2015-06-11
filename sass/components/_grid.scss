@@ -1,0 +1,27 @@
+@mixin container($value:$max-width){
+	@include clearfix;
+	width: $value;
+	margin-left: auto;
+	margin-right: auto;
+
+}//container
+
+
+@mixin col($col: $columns of $container-columns) {
+
+  $columns: nth($col,1);
+  $container-columns: container-span($col);
+
+  width: flex-grid($columns, $container-columns);
+  margin-right: flex-gutter($container-columns);
+  float: left;
+  //padding: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }//last-child
+
+}//col
+
+
+
