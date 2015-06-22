@@ -1,0 +1,45 @@
+%flag{
+	position: absolute;
+	z-index: 2;
+	
+	&:after{
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0; 
+		height: 0; 
+		border-right: 70px solid transparent;
+		border-top: 70px solid #f00;
+		z-index: -1;
+	}
+}
+
+
+.flag{
+
+	&-new{
+		@extend %flag;
+		&:after{
+			border-top: 70px solid #2e92bc; //blue
+		}
+	}//new
+
+	&-free{
+		@extend %flag;
+		&:after{
+			border-top: 70px solid #d83815; //red
+		}
+	}//free
+
+	&--text{
+		color: $white;
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 7px;
+		font-size: ms(-1);
+		@include transform(rotate(-45deg));
+	}//text
+}//flag

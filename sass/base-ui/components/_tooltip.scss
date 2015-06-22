@@ -1,0 +1,22 @@
+.js-tooltip-content{
+	position: absolute;
+	width: 70%;
+
+	color: $white;
+	background-color: $black;
+	padding: 10px;
+	font-size: ms(-2);
+	top: -15px;
+	right: 0px;
+	
+	display: none;
+	@include border-radius(10px);
+	border: 1px solid $grey;
+	&:before{
+		content: " ";
+		position: absolute;
+		top: 16px;
+		left: -7px;
+		@include triangle(left,8px,8px,$black);
+	}
+}

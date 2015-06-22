@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Tiny UI</title>
+	<title>Base UI</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="docs.css">
@@ -10,91 +10,219 @@
 
 <body>
 
-	<div class="l-container l-content-fix">
+<main class="l-container">
+		
+	<header id="header" class="header">
+		<a class="logo" href="index.html">
+			<img src="http://s77.mindvalley.us/mindvalley/media/images/mindvalley.svg" alt="">
+		</a>
+		<ul class="main-nav">
+		    <li><a href="#">Nav A</a></li>
+		    <li><a href="#">Nav B</a></li>
+		    <li><a href="#">Nav C</a></li>
+		</ul>
+	</header><!-- /header -->
 
-		<h3>Columns</h3>
 
-		<section>
-			<div class="col-2"><p>.col-2</p></div>
-			<div class="col-2"><p>.col-2</p></div>
-			<div class="col-2"><p>.col-2</p></div>
-			<div class="col-2"><p>.col-2</p></div>
-			<div class="col-2"><p>.col-2</p></div>
-			<div class="col-2 last"><p>.col-2 .last</p></div>
+	<!-- Sidebar Start-->
+	<aside class="sidebar js-sidebar">
+		<ul class="nav">
+		    <li class="active">
+		    	Components
+		    	<ul>
+		    	    <li>- Form</li>
+		    	    <li>- Table</li>
+		    	    <li>- Label</li>
+		    	    <li>- Button</li>
+		    	</ul>
+		    </li>
+		    <li>
+		    	Column
+		    </li>
+		    <li>
+		    	Section
+		    </li>
+		    <li>
+		    	Javascript
+		    </li>
+		</ul>
 
-			<div class="col-3"><p>.col-3</p></div>
-			<div class="col-3"><p>.col-3</p></div>
-			<div class="col-3"><p>.col-3</p></div>
-			<div class="col-3 last"><p>.col-3 .last</p></div>
+		<div class="js-expand sidebar-expand"></div>
 
-			<div class="col-4"><p>col-4</p></div>
-			<div class="col-4"><p>col-4</p></div>
-			<div class="col-4 last"><p>col-4</p></div>
+	</aside>
+	<!-- Sidebar End-->
 
-			<div class="col-6"><p>col-6</p></div>
-			<div class="col-6 last"><p>col-6 last</p></div>
+	<!-- Content Start-->
+	<article class="content">
+		<section class="l-content">
+			<h3>Progress bar</h3>
 
-			<div class="col-7"><p>col-7</p></div>
-			<div class="col-5 last"><p>col-5 last</p></div>
+			<section class="progress col-4">
+		    	<div class="progress-container">
+			    	<img class="progress--img" src="http://lorempixel.com/35/35/" alt="the big life">
+			    	<div class="progress-wrap">
+			    		<p class="progress-wrap--title">lorem ipsum</p>
+			    		<span class="progress-wrap--num">0%</span>
+				    	<div class="progress-bar">
+				    		<span class="progress-bar--meter"></span>
+				    	</div>
+			    	</div>
+		    	</div>
+			</section>
 
-			<div class="col-8"><p>col-8</p></div>
-			<div class="col-4 last"><p>col-4 last</p></div>
-
-			<div class="col-9"><p>col-9</p></div>
-			<div class="col-3 last"><p>col-3 last</p></div>
-
-			<div class="col-10"><p>col-10</p></div>
-			<div class="col-2 last"><p>col-2 last</p></div>
-
-			<div class="col-1"><p>col-1</p></div>
-			<div class="col-11 last"><p>col-11 last</p></div>
-
-			<div class="col-12"><p>col-12</p></div>
-
+			<section class="col-8">
+				<pre>
+				<code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu2"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropup
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code>
+			</pre>
+			</section>
 		</section>
 
-		<h3>Nested Columns</h3>
+		<section class="l-content">
+			<h3>Table</h3>
+			<h5>table-data</h5>
+			<section class="table-data col-4">
+				<table>
+					<thead>
+						<tr>
+							<th>header A</th>
+							<th>header B</th>
+							<th>header C</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>data A</td>
+							<td>data B</td>
+							<td>data C</td>
+						</tr>
+						<tr>
+							<td>data A</td>
+							<td>data B</td>
+							<td>data C</td>
+						</tr>
+						<tr>
+							<td>data A</td>
+							<td>data B</td>
+							<td>data C</td>
+						</tr>
+						<tr>
+							<td>data A</td>
+							<td>data B</td>
+							<td>data C</td>
+						</tr>
+						<tr>
+							<td>data A</td>
+							<td>data B</td>
+							<td>data C</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</section>
+
+			<section class="col-8">
+				<pre>
+				<code class="language-html" data-lang="html">
+					<span><</span><span>table</span><span>></span>
+						<span><</span><span>thead</span><span>></span>
+							<span><</span>tr>
+								<span><</span>th>header A<span><</span>/th>
+								<span><</span>th>header B<span><</span>/th>
+								<span><</span>th>header C<span><</span>/th>
+							<span><</span>/tr>
+						<span><</span>/thead>
+						<span><</span>tbody>
+							<span><</span>tr>
+								<span><</span>td>data A<span><</span>/td<span>></span>
+								<span><</span>td>data B<span><</span>/td<span>></span>
+								<span><</span>td>data C<span><</span>/td<span>></span>
+							<span><</span>/tr>
+							<span><</span>tr>
+								<span><</span>td>data A<span><</span>/td<span>></span>
+								<span><</span>td>data B<span><</span>/td<span>></span>
+								<span><</span>td>data C<span><</span>/td<span>></span>
+							<span><</span>/tr<span>></span>
+						<span><</span>/tbody<span>></span>
+					<span><</span>/table<span>></span>
+				</code>
+			</pre>
+			</section>
+		</section>
 
 		<section>
-			<div class="col-6">
-				<div class="col-6"><p>.col-6</p></div>
-				<div class="col-6 last"><p>.col-6</p></div>
+			<section class="col-4 form-details">
+				<form class="form-details__profile" action="index_submit" method="get" accept-charset="utf-8">
+					<h6 class="form-title">FORM</h6>
+
+					<div class="form-details__wrapper">
+						<div class="form-details__wrapper--col">
+							<label class="lab--name require-field">FIRST NAME</label>
+							<input type="text">
+
+							<div class="sel-arrow">
+								<select class="sel--country" name="COUNTRY">
+									<option value="US" selected="selected">United State</option>
+									<option value="CA">Canada</option>
+									<option value="GB">United Kingdom</option>
+									<option value="AU">Australia</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn--process" type="submit">SAVE</button>				
+				</form>
+			</section>
+
+
+			<section class="col-8">
+				a
+			</section>
+		</section>
+
+		<section>
+			<div class="col-4">
+				<a href="#" class="btn--process col-3">btn--progress</a>
+				<a href="#" class="btn--success col-3">btn--success</a>
+				<a href="#" class="btn--danger col-3">btn--danger</a>
+				<a href="#" class="btn--warn col-3">btn--warn</a>
+				<a href="#" class="btn--disable col-3">btn--disable</a>
+				<a href="#" class="btn--outline col-3">btn--outline</a>
+				<a href="#" class="btn--outline-arrow col-4">btn--outline-arrow</a>
 			</div>
-			
-			<div class="col-6 last"><p>.col-1</p></div>
+
+			<div class="col-8">
+				<pre>
+					<code>
+						<span><</span>a href="#" class="btn--process"<span>></span>btn--progress<span><</span>/a>
+						<span><</span>a href="#" class="btn--success"<span>></span>btn--success<span><</span>/a>
+						<span><</span>a href="#" class="btn--danger"<span>></span>btn--danger<span><</span>/a>
+						<span><</span>a href="#" class="btn--warn"<span>></span>btn--warn<span><</span>/a>
+						<span><</span>a href="#" class="btn--disable"<span>></span>btn--disable<span><</span>/a>
+						<span><</span>a href="#" class="btn--outline"<span>></span>btn--outline<span><</span>/a>
+						<span><</span>a href="#" class="btn--outline-arrow"<span>></span>btn--outline-arrow<span><</span>/a>
+					</code>
+				</pre>
+			</div>
 		</section>
+	</article>
 
-		<!-- <h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6> -->
-		
-		<div class="card l-content">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div><!-- Card -->
+	<!-- Content End-->
 
-		<!-- <div class="content">
-			<h6>Button</h6>
-
-			<a class="btn--process" href="#">btn--process</a>
-			<a class="btn--success" href="#">btn--success</a>
-			<a class="btn--danger" href="#">btn--danger</a>
-			<a class="btn--warn" href="#">btn--warn</a>
-			<a class="btn--disable" href="#">btn--disable</a>
-			<a class="btn--outline" href="#">btn--outline</a>
-			<a class="btn--outline-arrow" href="#">btn--outline-arrow</a>
-		</div> -->
+</main>
 
 
-		
-
-
-
-	</div>
-
+	
 </body>
 </html>

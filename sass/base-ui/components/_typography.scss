@@ -3,7 +3,7 @@ html{
 	font-family: $ft-primary;
 
 	@include media(tablet) {
-		font-size: map-deep-get($tiny-setup,fontSize);
+		font-size: $ft-base;
 		//text-align: center;
 
 	}

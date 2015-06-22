@@ -75,9 +75,10 @@ $nav-btn: (
 	margin-bottom: 35px;
 
 	.btn-collapse{
-		//@extend .fa;
 		border-bottom: 1px solid lighten($grey,20%);
 		padding: 15px;
+
+		@extend .fa;
 		
 		&:before{
 			content: "\f0c9";

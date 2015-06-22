@@ -1,32 +1,32 @@
-//CourseFlag
-//------------------------------------------------
-.course-flag{
+// //CourseFlag
+// //------------------------------------------------
+// .course-flag{
 
-	&--text{
-		color: $white;
-		display: block;
-		position: absolute;
-		top: 14px;
-		left: 7px;
-		font-size: ms(-1);
-		@include transform(rotate(-45deg));
-	}
+// 	&--text{
+// 		color: $white;
+// 		display: block;
+// 		position: absolute;
+// 		top: 14px;
+// 		left: 7px;
+// 		font-size: ms(-1);
+// 		@include transform(rotate(-45deg));
+// 	}
 
-	&__new{
-		@extend %courseFlag;
-		&:after{
-			border-top: 70px solid #2e92bc; //blue
-		}
+// 	&__new{
+// 		@extend %courseFlag;
+// 		&:after{
+// 			border-top: 70px solid #2e92bc; //blue
+// 		}
 
-	}
+// 	}
 
-	&__free{
-		@extend %courseFlag;
-		&:after{
-			border-top: 70px solid #d83815; //red
-		}
-	}	
-}//courseFlag
+// 	&__free{
+// 		@extend %courseFlag;
+// 		&:after{
+// 			border-top: 70px solid #d83815; //red
+// 		}
+// 	}	
+// }//courseFlag
 
 
 

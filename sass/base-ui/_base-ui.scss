@@ -10,8 +10,6 @@
 
 // Vendor
 //--------------------------------------------------------------------
-@import "font-awesome/font-awesome";
-
 
 @import "functions/unit-converter",
 		"functions/modular-scale",
@@ -31,10 +29,10 @@
 
 // Setup 
 //--------------------------------------------------------------------
-@import "setup/colors-var",
-		"setup/setup",
-		"setup/presets";
-
+@import "../setup/colors-var",
+		"../setup/setup",
+		"../setup/presets";
+		
 
 // Placeholder 
 //--------------------------------------------------------------------
@@ -60,7 +58,8 @@
 		"components/breadcrumb",
 		"components/button",
 		"components/content",
-		"components/courses",
+		"components/flag",
+		"components/item",
 		"components/form",
 		"components/header",
 		"components/label",
@@ -69,7 +68,6 @@
 		"components/progress",
 		"components/sidebar",
 		"components/table",
+		"components/tooltip",
 		"components/typography";
 
-
-@import "doc";

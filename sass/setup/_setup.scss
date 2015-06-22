@@ -1,12 +1,6 @@
 // link 
 //------------------------------------------- 
 
-$tiny-setup: (
-	fontSize:14px,
-	sidebarWidth: 280px
-) !default;
-
-
 $linkColor: lighten($grey,10%) !default; 
 
 
@@ -38,11 +32,6 @@ $double-octave:    4;
 $modular-scale-ratio: 1.14 !default;
 $modular-scale-base: $ft-base !default;
 
-// //Modular scale for Font -- https://github.com/modularscale/modularscale-sass
-// $my-ratio: 1em;
-// $ms-ratio: 1.14;  //ratio
-// $ms-range: null !default;
-
 
 // Set Grid
 $total-columns: 12 !default;
@@ -52,13 +41,16 @@ $padding: $gutter / 2;
 $max-width: 1024px;
 
 
+// Header ( Standard header size )
+//------------------------------------------------- 
 
 
 
-// Sidebar 
-//------------------------------------------- 
+
+// Sidebar setup ( mostly for admin panel theme )
+//------------------------------------------------- 
 // --- Sidebar width and spacing
 $sidebarSpacing: 25px;
-$sidebarWidth:  map-deep-get($tiny-setup,sidebarWidth);
+$sidebarWidth:  280px;
 
 

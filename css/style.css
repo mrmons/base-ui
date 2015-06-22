@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*
- * Author: @mrmons
- * Date: 
- *
- * Url: https://github.com/mrmons/tiny-ui
- *
- */
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -18,7 +11,7 @@
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .btn--close, .btn--outline-arrow:before, input[type='checkbox'] + label span.checkbox-round, .sel-arrow {
+.fa, .btn--close, .btn--outline-arrow:before, .btn-expand, .form-classic input[type='checkbox'] + label span.checkbox-round, .form-classic .sel-arrow, .nav-tab .btn-collapse, .sidebar-expand {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -76,9 +69,9 @@
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.btn--close, .pull-left.btn--outline-arrow:before, input[type='checkbox'] + label span.pull-left.checkbox-round, .pull-left.sel-arrow {
+.fa.pull-left, .pull-left.btn--close, .pull-left.btn--outline-arrow:before, .pull-left.btn-expand, .form-classic input[type='checkbox'] + label span.pull-left.checkbox-round, .form-classic .pull-left.sel-arrow, .nav-tab .pull-left.btn-collapse, .pull-left.sidebar-expand {
   margin-right: .3em; }
-.fa.pull-right, .pull-right.btn--close, .pull-right.btn--outline-arrow:before, input[type='checkbox'] + label span.pull-right.checkbox-round, .pull-right.sel-arrow {
+.fa.pull-right, .pull-right.btn--close, .pull-right.btn--outline-arrow:before, .pull-right.btn-expand, .form-classic input[type='checkbox'] + label span.pull-right.checkbox-round, .form-classic .pull-right.sel-arrow, .nav-tab .pull-right.btn-collapse, .pull-right.sidebar-expand {
   margin-left: .3em; }
 
 .fa-spin {
@@ -1796,6 +1789,18 @@
 .fa-medium:before {
   content: ""; }
 
+/*
+ * Author: @mrmons
+ * Date: 
+ *
+ * Url: https://github.com/mrmons/tiny-ui
+ *
+ */
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
 html, body {
   height: 100%; }
 
@@ -1819,6 +1824,10 @@ a {
   a:hover {
     opacity: 0.8; }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
 th {
   font-weight: 400; }
 
@@ -1827,33 +1836,6 @@ button {
 
 input[type="checkbox"].custom {
   display: none; }
-
-.btn--outline-arrow, .btn--outline {
-  color: #363636;
-  border: 1px solid #b7b7b7;
-  padding: 5px 20px;
-  text-decoration: none;
-  display: inline-block;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px; }
-
-.btn--process, .btn--success, .btn--danger, .btn--warn, .btn--disable, .btn--edit {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 5px 10px;
-  display: inline-block;
-  background: none;
-  text-align: center;
-  text-decoration: none;
-  border: 0;
-  color: #fff;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px; }
-  .btn--process:hover, .btn--success:hover, .btn--danger:hover, .btn--warn:hover, .btn--disable:hover, .btn--edit:hover {
-    opacity: 0.8; }
 
 .label-blue, .label-green, .label-red, .label-orange {
   width: 100px;
@@ -1868,31 +1850,7 @@ input[type="checkbox"].custom {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
 
-.course-flag__new, .course-flag__free {
-  position: absolute;
-  z-index: 2; }
-  .course-flag__new:after, .course-flag__free:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-right: 70px solid transparent;
-    border-top: 70px solid #f00;
-    z-index: -1; }
-
-.course-item--banner, .course-item--product {
-  width: 100%;
-  display: block;
-  background-color: #999;
-  position: relative; }
-  .course-item--banner img, .course-item--product img {
-    width: 100%;
-    height: 100%; }
-
-input[type="text"], input[type="email"], input[type="password"], select[class*="sel--"] {
+.form-classic input[type="text"], .form-classic input[type="email"], .form-classic input[type="password"], .form-classic select[class*="sel--"] {
   padding: 10px;
   margin-bottom: 20px;
   font-size: 0.9em;
@@ -1909,6 +1867,9 @@ input[type="text"], input[type="email"], input[type="password"], select[class*="
   z-index: 11;
   height: 100%;
   overflow: hidden; }
+  @media only screen and (min-width: 1200px) {
+    .sidebar {
+      width: 280px; } }
 
 .l-container {
   max-width: 100%;
@@ -2197,6 +2158,35 @@ input[type="text"], input[type="email"], input[type="password"], select[class*="
     display: table;
     clear: both; }
 
+.btn--outline-arrow, .btn--outline {
+  color: #363636;
+  border: 1px solid #b7b7b7;
+  padding: 5px 20px;
+  text-decoration: none;
+  display: inline-block;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; }
+
+.btn--process, .btn--success, .btn--danger, .btn--warn, .btn--disable, .btn--edit {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  display: inline-block;
+  background: none;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+button[class^="btn--"] {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px; }
+
 .btn--process {
   background-color: #12a8df; }
 .btn--success {
@@ -2248,8 +2238,30 @@ input[type="text"], input[type="email"], input[type="password"], select[class*="
   background-color: #fff;
   margin-left: 50px;
   display: block; }
+  @media only screen and (min-width: 1200px) {
+    .content {
+      margin-left: 280px; } }
 
-.course-flag--text {
+.flag-new, .flag-free {
+  position: absolute;
+  z-index: 2; }
+  .flag-new:after, .flag-free:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #f00;
+    z-index: -1; }
+
+.flag-new:after {
+  border-top: 70px solid #2e92bc; }
+.flag-free:after {
+  border-top: 70px solid #d83815; }
+.flag--text {
   color: #fff;
   display: block;
   position: absolute;
@@ -2261,47 +2273,51 @@ input[type="text"], input[type="email"], input[type="password"], select[class*="
   -webkit-transform: rotate(-45deg);
   /* Chrome, Safari, Opera */
   transform: rotate(-45deg); }
-.course-flag__new:after {
-  border-top: 70px solid #2e92bc; }
-.course-flag__free:after {
-  border-top: 70px solid #d83815; }
+
+.item, .item-banner, .item-product {
+  width: 100%;
+  min-height: 100px;
+  display: block;
+  background-color: #b7b7b7;
+  position: relative; }
+  .item a, .item-banner a, .item-product a, .item img, .item-banner img, .item-product img {
+    display: block; }
+  .item img, .item-banner img, .item-product img {
+    width: 100%;
+    height: 100%; }
 
 @media only screen and (min-width: 600px) {
-  .course-item--banner {
+  .item-banner {
     width: -1.60772%;
     float: left;
     margin-right: 1.60772%;
     margin-bottom: 1.60772%;
     width: 400px;
     height: 280px; }
-    .course-item--banner:last-child {
+    .item-banner:last-child {
       margin-right: 0; } }
-.course-item--product {
+.item-product {
   width: 49.19614%;
   float: left;
   margin-right: 1.60772%;
   margin-bottom: 1.60772%; }
-  .course-item--product:last-child {
+  .item-product:last-child {
     margin-right: 0; }
   @media only screen and (min-width: 320px) and (max-width: 599px) {
-    .course-item--product:nth-child(odd) {
+    .item-product:nth-child(odd) {
       margin-right: 0; } }
   @media only screen and (min-width: 600px) {
-    .course-item--product {
+    .item-product {
       width: -1.60772%;
       float: left;
       margin-right: 1.60772%;
       margin-bottom: 1.60772%;
       width: 190px;
       height: 280px; }
-      .course-item--product:last-child {
+      .item-product:last-child {
         margin-right: 0; } }
-.course-item--banner a, .course-item--product a {
-  display: block; }
-.course-item--banner img, .course-item--product img {
-  display: block; }
 
-.course-info {
+.item-info {
   display: block;
   color: #fff;
   position: absolute;
@@ -2310,38 +2326,36 @@ input[type="text"], input[type="email"], input[type="password"], select[class*="
   width: 100%;
   padding: 8px;
   border-top: 1px solid #9e9e9e; }
-  .course-info .fa, .course-info .btn--close, .course-info .btn--outline-arrow:before, .course-info input[type='checkbox'] + label span.checkbox-round, input[type='checkbox'] + label .course-info span.checkbox-round, .course-info .sel-arrow {
+  .item-info .fa, .item-info .btn--close, .item-info .btn--outline-arrow:before, .item-info .btn-expand, .item-info .form-classic input[type='checkbox'] + label span.checkbox-round, .form-classic input[type='checkbox'] + label .item-info span.checkbox-round, .item-info .form-classic .sel-arrow, .form-classic .item-info .sel-arrow, .item-info .nav-tab .btn-collapse, .nav-tab .item-info .btn-collapse, .item-info .sidebar-expand {
     margin-right: 5px; }
-  .course-info--title {
+  .item-info--title {
     float: left; }
-  .course-info--subcount {
+  .item-info--subcount {
     float: right; }
 
-input[type="text"], input[type="email"], input[type="password"] {
+.form-classic input[type="text"], .form-classic input[type="email"], .form-classic input[type="password"] {
   width: 100%; }
-  input[type="text"].error, input[type="email"].error, input[type="password"].error {
+  .form-classic input[type="text"].error, .form-classic input[type="email"].error, .form-classic input[type="password"].error {
     border: 1px solid #d33216; }
-
-input[type="submit"] {
+.form-classic input[type="submit"] {
   cursor: pointer; }
-
-label[class*="lab--"] {
+.form-classic label[class*="lab--"] {
   color: #aeaeae;
   margin-bottom: 5px;
   display: block;
   font-size: 12.2807px; }
-
-select[class*="sel--"] {
+.form-classic select[class*="sel--"] {
   display: block;
   width: 100%;
   border: 1px solid #e9e9e9;
-  -webkit-appearance: searchfield;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: #5d5d5d;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0; }
-
-input[type='checkbox'] + label span.checkbox-round {
+.form-classic input[type='checkbox'] + label span.checkbox-round {
   width: 15px;
   height: 15px;
   -moz-border-radius: 100%;
@@ -2351,11 +2365,10 @@ input[type='checkbox'] + label span.checkbox-round {
   cursor: pointer;
   position: relative; }
   @media only screen and (min-width: 1200px) {
-    input[type='checkbox'] + label span.checkbox-round {
+    .form-classic input[type='checkbox'] + label span.checkbox-round {
       width: 20px;
       height: 20px; } }
-
-input[type='checkbox']:checked + label span.checkbox-round:after {
+.form-classic input[type='checkbox']:checked + label span.checkbox-round:after {
   content: "\f00c";
   position: absolute;
   color: #fff;
@@ -2363,10 +2376,10 @@ input[type='checkbox']:checked + label span.checkbox-round:after {
   top: 0em;
   left: 0em; }
   @media only screen and (min-width: 1200px) {
-    input[type='checkbox']:checked + label span.checkbox-round:after {
+    .form-classic input[type='checkbox']:checked + label span.checkbox-round:after {
       top: 0.14286em;
       left: 0.14286em; } }
-input[type='checkbox']:checked + label span.checkbox-round:before {
+.form-classic input[type='checkbox']:checked + label span.checkbox-round:before {
   content: "";
   display: block;
   background-color: #12a8df;
@@ -2379,55 +2392,167 @@ input[type='checkbox']:checked + label span.checkbox-round:before {
   -webkit-border-radius: 100%;
   border-radius: 100%; }
   @media only screen and (min-width: 1200px) {
-    input[type='checkbox']:checked + label span.checkbox-round:before {
+    .form-classic input[type='checkbox']:checked + label span.checkbox-round:before {
       width: 21px;
       height: 21px; } }
-
-.sel-arrow {
-  width: 100%; }
-  .sel-arrow:after {
+.form-classic .sel-arrow {
+  width: 100%;
+  position: relative; }
+  .form-classic .sel-arrow:after {
     content: "\f0d7";
     position: absolute;
     top: 11px;
     right: 10px;
     color: #c4c4c4;
     display: block; }
-
-.require-field:after {
+.form-classic .require-field:after {
   content: "*";
   color: #d33216;
   padding: 0 5px; }
-
-.info-form--col {
+.form-classic .info-form--col {
   width: 49.19614%;
   float: left;
   margin-right: 1.60772%;
   margin-bottom: 1.60772%; }
-  .info-form--col:last-child {
+  .form-classic .info-form--col:last-child {
     margin-right: 0; }
-
-.form-group--inline .field-group--month, .form-group--inline .field-group--year {
-  width: 23.79421%;
+.form-classic .form-group--date .field--month, .form-classic .form-group--date .field--year {
+  width: 100%;
   float: left;
   margin-right: 1.60772%;
   margin-bottom: 1.60772%; }
-  .form-group--inline .field-group--month:last-child, .form-group--inline .field-group--year:last-child {
+  .form-classic .form-group--date .field--month:last-child, .form-classic .form-group--date .field--year:last-child {
     margin-right: 0; }
-.form-group--inline .field-group--cvv {
-  width: 23.79421%;
+  @media only screen and (min-width: 600px) {
+    .form-classic .form-group--date .field--month, .form-classic .form-group--date .field--year {
+      width: 23.79421%;
+      float: left;
+      margin-right: 1.60772%;
+      margin-bottom: 1.60772%; }
+      .form-classic .form-group--date .field--month:last-child, .form-classic .form-group--date .field--year:last-child {
+        margin-right: 0; } }
+.form-classic .form-group--date .creditcard-tooltip {
+  background-color: #b7b7b7;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 12.2807px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  cursor: pointer; }
+.form-classic .form-group--date .ico--creditcard {
+  float: right; }
+.form-classic .form-group--date .field--month {
+  margin-right: 20px;
+  position: relative; }
+  .form-classic .form-group--date .field--month:after {
+    content: "/";
+    position: absolute;
+    right: -13px;
+    top: 28px;
+    display: none;
+    color: #b7b7b7; }
+    @media only screen and (min-width: 600px) {
+      .form-classic .form-group--date .field--month:after {
+        display: inline; } }
+.form-classic .form-group--date .field--year {
+  margin-top: 0; }
+  @media only screen and (min-width: 600px) {
+    .form-classic .form-group--date .field--year {
+      margin-top: 19px; } }
+.form-classic .form-group--date .field--cvv {
+  width: 100%;
   float: left;
   margin-right: 1.60772%;
   margin-bottom: 1.60772%;
-  float: right; }
-  .form-group--inline .field-group--cvv:last-child {
+  position: relative; }
+  .form-classic .form-group--date .field--cvv:last-child {
     margin-right: 0; }
-.form-group--inline:after {
+  @media only screen and (min-width: 600px) {
+    .form-classic .form-group--date .field--cvv {
+      width: 23.79421%;
+      float: left;
+      margin-right: 1.60772%;
+      margin-bottom: 1.60772%;
+      float: right; }
+      .form-classic .form-group--date .field--cvv:last-child {
+        margin-right: 0; } }
+.form-classic .form-group--date:after {
   content: " ";
   display: table;
   clear: both; }
-
-.form-title {
+.form-classic .form-title {
   margin-bottom: 20px; }
+
+.form-payment label {
+  margin-bottom: 10px;
+  text-indent: 2px;
+  display: block; }
+.form-col--left, .form-col--right {
+  width: 100%;
+  float: left;
+  margin-right: 1.60772%;
+  margin-bottom: 1.60772%;
+  margin-bottom: 0; }
+  .form-col--left:last-child, .form-col--right:last-child {
+    margin-right: 0; }
+  @media only screen and (min-width: 1200px) {
+    .form-col--left, .form-col--right {
+      width: 46.89826%;
+      float: left;
+      margin-right: 6.20347%;
+      margin-bottom: 6.20347%;
+      margin-bottom: 0; }
+      .form-col--left:last-child, .form-col--right:last-child {
+        margin-right: 0; } }
+.form--info {
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block; }
+  .form--info:after {
+    content: " ";
+    display: table;
+    clear: both; }
+.form--method {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block; }
+  .form--method:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .form--method .ico--creditcard {
+    float: right; }
+  .form--method .field--month {
+    margin-right: 20px;
+    position: relative; }
+    .form--method .field--month:after {
+      content: "/";
+      position: absolute;
+      right: -13px;
+      top: 38px;
+      display: none;
+      color: #b7b7b7; }
+      @media only screen and (min-width: 600px) {
+        .form--method .field--month:after {
+          display: inline; } }
+  .form--method .field--year {
+    margin-top: 0; }
+    @media only screen and (min-width: 600px) {
+      .form--method .field--year {
+        margin-top: 29px; } }
+.form:after {
+  content: " ";
+  display: table;
+  clear: both; }
 
 .header {
   width: 100%;
@@ -2795,10 +2920,20 @@ input[type='checkbox']:checked + label span.checkbox-round:before {
       .sidebar-expand:after {
         content: "\f100"; } }
 
+.side-content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-left: 50px;
+  display: block; }
+  @media only screen and (min-width: 1200px) {
+    .side-content {
+      margin-left: 280px; } }
+
 .table-data {
-  overflow-x: auto; }
-  .table-data table {
-    width: 100%; }
+  overflow-x: auto;
+  width: 100%; }
   .table-data th {
     color: #b7b7b7;
     font-size: 0.85em; }
@@ -2810,12 +2945,37 @@ input[type='checkbox']:checked + label span.checkbox-round:before {
     .table-data td:first-child, .table-data th:first-child {
       padding-left: 0; }
 
+.js-tooltip-content {
+  position: absolute;
+  width: 70%;
+  color: #fff;
+  background-color: #363636;
+  padding: 10px;
+  font-size: 10.77255px;
+  top: -15px;
+  right: 0px;
+  display: none;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #b7b7b7; }
+  .js-tooltip-content:before {
+    content: " ";
+    position: absolute;
+    top: 16px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #363636; }
+
 html {
   font-size: 12px;
   font-family: "Open Sans", sans-serif; }
   @media only screen and (min-width: 600px) {
     html {
-      font-size: 20px; } }
+      font-size: 14px; } }
 
 body {
   font-size: 14px; }

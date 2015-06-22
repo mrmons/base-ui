@@ -1,3 +1,29 @@
+%btnOutline{
+	color: $black;
+	border: 1px solid $grey;
+	padding: 5px 20px;
+	text-decoration: none;
+	display: inline-block;
+	@include border-radius(20px);
+}//%btnOutline
+
+%btnBox{
+	@include box-sizing();
+	padding: 5px 10px;
+	display: inline-block;
+	background: none;
+	text-align: center;
+	text-decoration: none;
+	border: 0;
+	color: $white;
+	@include border-radius(4px);
+}//%btnBox
+
+button[class^="btn--"]{
+	font-family: $ft-primary;
+	font-size:  $ft-base;
+}
+
 
 //Global All class start with .btn--xxx
 .btn--{
@@ -28,8 +54,6 @@
 	// &edit{
 	// 	background-color: $grey;
 	// }//edit
-
-
 
 	&close{
 		@extend .fa;
@@ -71,7 +95,7 @@
 	right: 0px;
 	padding: 15px;
 
-	//@extend .fa;
+	@extend .fa;
 
 	&:before{
 		content: "\f100";
