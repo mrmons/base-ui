@@ -1,0 +1,23 @@
+.label{
+
+	&-blue{
+		@extend %label;
+		background-color: $blue;
+	}
+
+	&-green{
+		@extend %label;
+		background-color: $green;
+	}
+
+	&-red{
+		@extend %label;
+		background-color: $red;
+	}
+
+	&-orange{
+		@extend %label;
+		background-color: $orange;
+	}
+
+}

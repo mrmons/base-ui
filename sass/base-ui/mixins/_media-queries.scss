@@ -1,0 +1,94 @@
+$mqMobile: 320px;
+$mqMaxMobile: 599px;
+$mqTablet: 600px;
+$mqMaxTablet:1024px;
+$mqDesktop: 1200px;
+
+
+@mixin media($device:desktop, $handheld:default){
+
+    @if $device == mobile{
+
+      @if $handheld == default{
+        @media only screen and (min-width: $mqMobile) { 
+          @content; 
+        }
+      }@else if $handheld == portrait{
+        @media only screen and (min-width: $mqMobile) and (orientation: portrait){ 
+          @content; 
+        }
+      }@else if $handheld == landscape{
+         @media only screen and (min-width: $mqMobile) and (orientation: landscape){ 
+          @content; 
+        }
+      }//End of mobile handheld check
+    }
+
+    @if $device == mobileOnly{
+      //Check mobile handheld
+      @if $handheld == default{
+        @media only screen and (min-width: $mqMobile) and (max-width: $mqMaxMobile){ 
+          @content; 
+        }
+      }@else if $handheld == portrait{
+        @media only screen and (min-width: $mqMobile) and (max-width: $mqMobile) and (orientation: portrait){ 
+          @content; 
+        }
+      }@else if $handheld == landscape{
+         @media only screen and (min-width: $mqMobile) and (max-width: $mqMaxMobile) and (orientation: landscape){ 
+          @content; 
+        }
+      }//End of mobile handheld check
+    }
+
+
+    @if $device == tablet{
+      //Check tablet handheld 
+      @if $handheld == default{
+        @media only screen and (min-width: $mqTablet) { 
+          @content; 
+        }
+      }@else if $handheld == portrait{
+        @media only screen and (min-width: $mqTablet) and (orientation: portrait){ 
+          @content; 
+        }
+      }@else if $handheld == landscape{
+         @media only screen and (min-width: $mqTablet) and (orientation: landscape){ 
+          @content; 
+        }
+      }//End of tablet handheld check
+    }
+
+    @if $device == tabletOnly{
+      //Check tablet handheld 
+      @if $handheld == default{
+        @media only screen and (min-width: $mqTablet) and (max-width: $mqMaxTablet){ 
+          @content; 
+        }
+      }@else if $handheld == portrait{
+        @media only screen and (min-width: $mqTablet) and (max-width: $mqMaxTablet) and (orientation: portrait){ 
+          @content; 
+        }
+      }@else if $handheld == landscape{
+         @media only screen and (min-width: $mqTablet) and (max-width: $mqMaxTablet) and (orientation: landscape){ 
+          @content; 
+        }
+      }//End of tablet handheld check
+    }
+
+    @if $device == desktop{
+      //Check desktop
+      @media only screen and (min-width: $mqDesktop) { 
+        @content; 
+      }
+    }
+
+    @if $device == retina{
+      //Check retina
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        @content;
+      }
+    }//retina
+
+}//media
+

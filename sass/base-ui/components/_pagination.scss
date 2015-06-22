@@ -1,0 +1,36 @@
+
+.pagination{
+	ul{
+	margin-top: 25px;
+	float: right;
+
+	li{
+		float: left;
+	}
+
+	a,.pagination--range{
+		float: left;
+		display: block;
+		width: 35px;
+		height: 35px;
+		padding: 7px 0;
+		text-align: center;
+		margin-right: 10px;
+	}
+
+	a{
+		@include border-radius(100%);
+		border: 1px solid lighten($grey,10%);
+		
+		
+
+		&:hover{
+			background-color: $blue;
+			border-color: $grey;
+			color: $white;
+		}//hover
+	}//li
+
+	@include clearfix;
+	}//.pagination
+}

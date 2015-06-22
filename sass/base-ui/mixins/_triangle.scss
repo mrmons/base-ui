@@ -1,0 +1,30 @@
+@mixin triangle($direction, $point, $value, $color){
+
+	width: 0;
+	height: 0;
+
+	@if $direction == left {
+		border-top: $value solid transparent;
+		border-bottom: $value solid transparent;
+		border-right: $point solid $color; 
+	}
+
+	@if $direction == right {
+		border-top: $value solid transparent;
+		border-bottom: $value solid transparent;
+		border-left: $point solid $color; 
+	}
+
+	@if $direction == top {
+		border-top: $value solid transparent;
+		border-bottom: $value solid transparent;
+		border-bottom: $point solid $color; 
+	}
+
+	@if $direction == bottom {
+		border-top: $value solid transparent;
+		border-bottom: $value solid transparent;
+		border-top: $point solid $color; 
+	}
+
+}//triangle

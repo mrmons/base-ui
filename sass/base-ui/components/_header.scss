@@ -1,0 +1,118 @@
+// --- Header
+$headerHeight: 70px;
+
+.header{
+	width: 100%;
+	background-color: $blue; 
+	height: 100%;
+
+	.logo{
+		width: 55px;
+		float: left;
+		padding: 0;
+		cursor: pointer;
+		overflow: hidden;
+		@include border-radius(100%);
+		
+
+		@include media(desktop) {
+			width: auto;
+			height: auto;
+			padding: 17px 50px 11px 22px;
+			@include border-radius(0);
+		}
+
+		img{
+			width: 250%;
+			position: relative;
+			left: 16px;
+			top: 17px;
+
+			@include media(desktop) {
+				width: 130%;
+				left: 0;
+				top: 0;
+				
+			}
+		}//img
+	}
+
+	@include clearfix;
+
+}//header
+
+
+
+// Main navigation
+//------------------------------------------------------------------------------------------
+
+// Unicode is base on Font Awesome
+$main-nav-btn: (
+	search: "\f002",
+	notice: "\f0a2",
+	logout: "\f090"
+);
+
+.main-nav{
+	float: right;
+	margin-right: 20px;
+
+	li{
+		float: left;
+		position: relative;
+	}
+
+	@include media(desktop) {
+		margin-right: 35px;
+	}
+
+	@each $main-nav-btn, $content in $main-nav-btn{
+		.btn-#{$main-nav-btn}:before{
+			//@extend .fa;
+			//@extend .fa-fw;
+			font-size: ms(2);
+			color: $white;
+			content: $content;
+			padding: 15px 15px;
+			text-align: center;
+			@include media(desktop) {
+				padding: 20px 25px;
+			}
+		}
+	}
+
+	.btn-notice--num{
+		font-size: ms(-2);
+		background-color: $red;
+		position: absolute;
+		padding: 3px 5px;
+		color: $white;
+		top: 18px;
+		left: 20px;
+		@include border-radius(100%);
+	}
+
+	.btn-profile{
+		display: block;
+		position: relative;
+		width: 35px;
+		height: 35px;
+		margin-left: 20px;
+		right: 0px;
+		top: 7px;
+
+		@include media(desktop) {
+			width: 40px;
+			height: 40px;
+			top: 8px;
+		}
+
+		img{
+			width: 100%;
+			border: 2px solid $white;
+			@include border-radius(100%);
+		}//img
+	}//.btn-profile
+
+}//.main-nav
+

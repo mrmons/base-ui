@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<title>Tiny-ui</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+		<a class="logo" href="index.html">
+			<img src="http://s77.mindvalley.us/mindvalley/media/images/mindvalley.svg" alt="">
+		</a>
+
+		<ul class="main-nav">
+		    <li><a href="#" class="btn-search js-popup"></a></li>
+		    <!-- <li><a href="#" class="btn-notice"><span class="btn-notice--num">99</span></a></li> -->
+		    <li><a href="#" class="btn-logout"></a></li>
+		    <li><a href="profile.html" class="btn-profile"><img src="images/img_profile.jpg"></a></li>
+		</ul>
+</header><!-- /header -->
+
+
+<main class="l-container l-content-fix">
+
+	<aside class="sidebar js-sidebar">
+		<ul class="nav">
+		    <li class="active">
+		    	<a class="btn-dashboard" href="index.html"><span>Dashboard</span></a>
+		    </li>
+		    <li>
+		    	<a class="btn-activity" href="activity.html"><span>Activity</span></a>
+		    </li>
+		    <li>
+		    	<a class="btn-order" href="order.html"><span>Orders</span></a>
+		    </li>
+		    <li>
+		    	<a class="btn-shipment" href="shipments.html"><span>Shipments</span></a>
+		    </li>
+		    <li>
+		    	<a class="btn-rewards" href="#"><span>Rewards</span></a>
+		    </li>
+		    <li>
+		    	<a class="btn-settings" href="settings.html"><span>Settings</span></a>
+		    </li>
+		</ul>
+
+		<section class="progress">
+			<h5 class="progress--title">Latest Progress</h5>
+
+	    	<div class="progress-container">
+		    	<img class="progress--img" src="images/progress-thumb.jpg" alt="the big life">
+		    	<div class="progress-wrap">
+		    		<p class="progress-wrap--title">The Big Life</p>
+		    		<span class="progress-wrap--num">0%</span>
+			    	<div class="progress-bar">
+			    		<span class="progress-bar--meter"></span>
+			    	</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="progress-container">
+		    	<img class="progress--img" src="images/progress-thumb.jpg" alt="the big life">
+		    	<div class="progress-wrap">
+		    		<p class="progress-wrap--title">Creation Method</p>
+		    		<span class="progress-wrap--num">100%</span>
+			    	<div class="progress-bar">
+			    		<span class="progress-bar--meter"></span>
+			    	</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="progress-container">
+		    	<img class="progress--img" src="images/progress-thumb.jpg" alt="the big life">
+		    	<div class="progress-wrap">
+		    		<p class="progress-wrap--title">Enlightened Sex</p>
+		    		<span class="progress-wrap--num">0%</span>
+			    	<div class="progress-bar">
+			    		<span class="progress-bar--meter"></span>
+			    	</div>
+		    	</div>
+	    	</div>
+
+		</section>
+
+		<div class="js-expand sidebar-expand"></div>
+
+	</aside>
+	
+	<h3>Default Classes (for customise layout)</h3>
+	<ul>
+	    <li><a href="columns.html">Columns</a></li>
+	</ul>
+
+	<h3>Components Classes</h3>
+
+	<ul>
+	    <li><a href="components.html">components</a></li>
+	</ul>
+
+</main>
+
+<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+ 	<script src="js/vendor/selectivizr-min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/vendor/velocity.min.js"></script>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>

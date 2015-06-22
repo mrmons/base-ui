@@ -1,0 +1,204 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tiny UI</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="docs.css">
+</head>
+
+<body>
+
+<main class="l-container">
+		
+	<header id="header" class="header">
+		<a class="logo" href="index.html">
+			<img src="http://s77.mindvalley.us/mindvalley/media/images/mindvalley.svg" alt="">
+		</a>
+		<ul class="main-nav">
+		    <li><a href="#">Nav A</a></li>
+		    <li><a href="#">Nav B</a></li>
+		    <li><a href="#">Nav C</a></li>
+		</ul>
+	</header><!-- /header -->
+
+
+
+	<section class="l-content">
+		<h3>Progress bar</h3>
+
+		<section class="progress col-4">
+	    	<div class="progress-container">
+		    	<img class="progress--img" src="http://lorempixel.com/35/35/" alt="the big life">
+		    	<div class="progress-wrap">
+		    		<p class="progress-wrap--title">lorem ipsum</p>
+		    		<span class="progress-wrap--num">0%</span>
+			    	<div class="progress-bar">
+			    		<span class="progress-bar--meter"></span>
+			    	</div>
+		    	</div>
+	    	</div>
+		</section>
+
+		<section class="col-8">
+			<pre>
+			<code class="language-html" data-lang="html">
+				<span><</span>section class="progress col-3"<span>></span>
+			    	<span><</span>div class="progress-container"<span>></span>
+				    	<span><</span>img class="progress--img" src="http://lorempixel.com/35/35/" alt="the big life"<span>></span>
+				    	<span><</span>div class="progress-wrap"<span>></span>
+				    		<span><</span>p class="progress-wrap--title"<span>></span>lorem ipsum<span><</span>/p<span>></span>
+				    		<span><</span>span class="progress-wrap--num"<span>></span>0%<span><</span>/span<span>></span>
+					    	<span><</span>div class="progress-bar"<span>></span>
+					    		<span><</span>span class="progress-bar--meter"<span>></span><span><</span>/span<span>></span>
+					    	<span><</span>/div<span>></span>
+				    	<span><</span>/div<span>></span>
+			    	<span><</span>/div<span>></span>
+				<span><</span>/section<span>></span>
+			</code>
+		</pre>
+		</section>
+	</section>
+
+
+
+	<section class="l-content">
+		<h3>Table</h3>
+		<h5>table-data</h5>
+		<section class="table-data col-4">
+			<table>
+				<thead>
+					<tr>
+						<th>header A</th>
+						<th>header B</th>
+						<th>header C</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>data A</td>
+						<td>data B</td>
+						<td>data C</td>
+					</tr>
+					<tr>
+						<td>data A</td>
+						<td>data B</td>
+						<td>data C</td>
+					</tr>
+					<tr>
+						<td>data A</td>
+						<td>data B</td>
+						<td>data C</td>
+					</tr>
+					<tr>
+						<td>data A</td>
+						<td>data B</td>
+						<td>data C</td>
+					</tr>
+					<tr>
+						<td>data A</td>
+						<td>data B</td>
+						<td>data C</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+
+		<section class="col-8">
+			<pre>
+			<code class="language-html" data-lang="html">
+				<span><</span>table<span>></span>
+					<span><</span>thead<span>></span>
+						<span><</span>tr>
+							<span><</span>th>header A<span><</span>/th>
+							<span><</span>th>header B<span><</span>/th>
+							<span><</span>th>header C<span><</span>/th>
+						<span><</span>/tr>
+					<span><</span>/thead>
+					<span><</span>tbody>
+						<span><</span>tr>
+							<span><</span>td>data A<span><</span>/td<span>></span>
+							<span><</span>td>data B<span><</span>/td<span>></span>
+							<span><</span>td>data C<span><</span>/td<span>></span>
+						<span><</span>/tr>
+						<span><</span>tr>
+							<span><</span>td>data A<span><</span>/td<span>></span>
+							<span><</span>td>data B<span><</span>/td<span>></span>
+							<span><</span>td>data C<span><</span>/td<span>></span>
+						<span><</span>/tr<span>></span>
+					<span><</span>/tbody<span>></span>
+				<span><</span>/table<span>></span>
+			</code>
+		</pre>
+		</section>
+
+	</section>
+
+
+	<section>
+		<section class="col-4 form-details">
+			<form class="form-details__profile" action="index_submit" method="get" accept-charset="utf-8">
+				<h6 class="form-title">FORM</h6>
+
+				<div class="form-details__wrapper">
+					<div class="form-details__wrapper--col">
+						<label class="lab--name require-field">FIRST NAME</label>
+						<input type="text">
+
+						<div class="sel-arrow">
+							<select class="sel--country" name="COUNTRY">
+								<option value="US" selected="selected">United State</option>
+								<option value="CA">Canada</option>
+								<option value="GB">United Kingdom</option>
+								<option value="AU">Australia</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<button class="btn--process" type="submit">SAVE</button>				
+			</form>
+		</section>
+
+
+		<section class="col-8">
+			a
+		</section>
+	</section>
+
+	<section>
+		<div class="col-4">
+			<a href="#" class="btn--process col-3">btn--progress</a>
+			<a href="#" class="btn--success col-3">btn--success</a>
+			<a href="#" class="btn--danger col-3">btn--danger</a>
+			<a href="#" class="btn--warn col-3">btn--warn</a>
+			<a href="#" class="btn--disable col-3">btn--disable</a>
+			<a href="#" class="btn--outline col-3">btn--outline</a>
+			<a href="#" class="btn--outline-arrow col-4">btn--outline-arrow</a>
+		</div>
+
+		<div class="col-8">
+			<pre>
+				<code>
+					<span><</span>a href="#" class="btn--process"<span>></span>btn--progress<span><</span>/a>
+					<span><</span>a href="#" class="btn--success"<span>></span>btn--success<span><</span>/a>
+					<span><</span>a href="#" class="btn--danger"<span>></span>btn--danger<span><</span>/a>
+					<span><</span>a href="#" class="btn--warn"<span>></span>btn--warn<span><</span>/a>
+					<span><</span>a href="#" class="btn--disable"<span>></span>btn--disable<span><</span>/a>
+					<span><</span>a href="#" class="btn--outline"<span>></span>btn--outline<span><</span>/a>
+					<span><</span>a href="#" class="btn--outline-arrow"<span>></span>btn--outline-arrow<span><</span>/a>
+				</code>
+			</pre>
+		</div>
+	</section>
+
+
+
+</main>
+
+
+	
+</body>
+</html>

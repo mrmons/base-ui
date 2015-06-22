@@ -1,0 +1,56 @@
+.breadcrumb{
+	font-size: ms(4);
+	margin: 1.42857em 0 2em 0;
+	.breadcrumb--title{
+		
+		float: none;
+
+		@include media(desktop) {
+			float: left;
+		}
+
+		a{
+			//@extend .fa; 
+			display: block;
+
+			&:after{
+				content: "/";
+				padding: 0;
+			}
+
+			@include media(desktop) {
+				display: inline;
+				&:after{
+					content: "\f105";
+					padding: 0 20px;
+				}//after
+			}//media
+		}//a
+	}//breadcrumb--title
+
+	.helper-collection{
+		float: none;
+		margin-top: 30px;
+		font-size: ms(-4);
+		@include media(desktop) {
+			float: right;
+			margin-top: 3px;
+		}
+
+		li{
+			float: left;
+			margin-right: 10px;
+			font-size: ms(-2);
+
+			@include media(desktop) {
+				margin-right: 20px;
+				font-size: ms(0);
+			}
+
+			&:last-child{
+				margin-right: 0;
+			}//last-child
+		}//li
+	}//.helper-collection
+	@include clearfix;
+}//.info-details--breadcrumb

@@ -1,0 +1,103 @@
+//CourseFlag
+//------------------------------------------------
+.course-flag{
+
+	&--text{
+		color: $white;
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 7px;
+		font-size: ms(-1);
+		@include transform(rotate(-45deg));
+	}
+
+	&__new{
+		@extend %courseFlag;
+		&:after{
+			border-top: 70px solid #2e92bc; //blue
+		}
+
+	}
+
+	&__free{
+		@extend %courseFlag;
+		&:after{
+			border-top: 70px solid #d83815; //red
+		}
+	}	
+}//courseFlag
+
+
+
+//CourseItem
+//------------------------------------------------
+
+.course-item{
+	&--banner{
+		@extend %courseItem;
+		@include media(tablet) {
+			@include col(0);
+			width: 400px;
+			height: 280px;
+		}//media
+	}//banner
+
+	&--product{
+		@extend %courseItem;
+		@include col(6);
+
+		@include media(mobileOnly) {
+			&:nth-child(odd){
+				margin-right:0;
+			}//nth-child(odd)
+		}
+
+		@include media(tablet) {
+			@include col(0);
+			width: 190px;
+			height: 280px;
+		}//media
+	}//product
+
+	&--banner,&--product{
+		a{
+			display: block;
+		}
+
+		img{
+			display: block;
+		}
+	}
+
+}//courseItem
+
+
+.course-info{
+	display: block;
+	color: $white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 8px;
+	border-top: 1px solid darken($grey,10%);
+
+	.fa{
+		margin-right: 5px;
+	}
+
+	&--title{
+		float: left;
+	}
+
+	&--subcount{
+		float: right;
+	}
+}//courseInfo
+
+
+
+
+
+

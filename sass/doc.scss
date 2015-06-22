@@ -1,0 +1,22 @@
+section{
+	@include clearfix;
+}
+
+a{
+
+	text-decoration: none;
+}
+
+
+.columns{
+	@include clearfix;
+}
+
+@for $i from 1 through $total-columns{
+	.col-#{$i}{
+		//background-color: #00aeef; //blue
+		//text-align: center;
+		//opacity: 0.7;
+	//	min-height: 83px;
+	}//col
+}

@@ -1,0 +1,64 @@
+// link 
+//------------------------------------------- 
+
+$tiny-setup: (
+	fontSize:14px,
+	sidebarWidth: 280px
+) !default;
+
+
+$linkColor: lighten($grey,10%) !default; 
+
+
+// Fonts
+$ft-base: 14px !default; // default desktop base font
+$ft-device: $ft-base - 2px;
+$ft-headline: "Roboto", sans-serif;
+$ft-primary: "Open Sans",sans-serif;
+
+// Scaling Variables
+$golden:           1.618;
+$minor-second:     1.067;
+$major-second:     1.125;
+$minor-third:      1.2;
+$major-third:      1.25;
+$perfect-fourth:   1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth:    1.5;
+$minor-sixth:      1.6;
+$major-sixth:      1.667;
+$minor-seventh:    1.778;
+$major-seventh:    1.875;
+$octave:           2;
+$major-tenth:      2.5;
+$major-eleventh:   2.667;
+$major-twelfth:    3;
+$double-octave:    4;
+
+$modular-scale-ratio: 1.14 !default;
+$modular-scale-base: $ft-base !default;
+
+// //Modular scale for Font -- https://github.com/modularscale/modularscale-sass
+// $my-ratio: 1em;
+// $ms-ratio: 1.14;  //ratio
+// $ms-range: null !default;
+
+
+// Set Grid
+$total-columns: 12 !default;
+$parent-columns: $total-columns !default;
+$gutter: 20px;
+$padding: $gutter / 2;
+$max-width: 1024px;
+
+
+
+
+
+// Sidebar 
+//------------------------------------------- 
+// --- Sidebar width and spacing
+$sidebarSpacing: 25px;
+$sidebarWidth:  map-deep-get($tiny-setup,sidebarWidth);
+
+

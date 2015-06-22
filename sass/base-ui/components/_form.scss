@@ -1,0 +1,139 @@
+
+
+input[type="text"],input[type="email"],input[type="password"]{
+	@extend %form-field;
+	width: 100%;
+	
+	&.error{
+		border: 1px solid $red;
+	}
+}//input[type="text"],input[type="email"]
+
+input[type="submit"]{
+	cursor: pointer;
+}
+
+
+label[class*="lab--"]{
+	color: #aeaeae;
+	margin-bottom: 5px;
+	display: block;
+	font-size: ms(-1);
+}//label[class*="lab--"]
+
+
+select[class*="sel--"]{
+	@extend %form-field;
+	display: block;
+	width: 100%;
+	border: 1px solid #e9e9e9;
+	-webkit-appearance: searchfield;  
+	color: #5d5d5d;
+	@include border-radius(0);
+}//select[class*="sel--"]
+
+
+input[type='checkbox'] + label span.checkbox-round{
+	width:15px;
+    height:15px;
+    @include border-radius(100%);
+    border: 1px solid $grey;
+    cursor: pointer;
+    position: relative;
+    @extend .fa;
+
+    @include media(desktop) {
+    	width:20px;
+    	height:20px;
+    }
+}
+
+input[type='checkbox']:checked + label span.checkbox-round{
+	&:after{
+		content: "\f00c";
+		position: absolute;
+		color: $white;
+		z-index: 1;
+		top: em(0px);
+		left: em(0px);
+		@include media(desktop) {
+			top: em(2px);
+			left: em(2px);
+		}
+    }
+
+    &:before{
+		content: "";
+		display: block;
+		background-color: $blue;
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		width:16px;
+	    height:16px;
+	    @include border-radius(100%);
+
+	     @include media(desktop) {
+	    	width:21px;
+	    	height:21px;
+	    }
+    }
+}
+
+
+
+
+
+
+
+.sel-arrow{
+	@extend .fa;
+	width: 100%;
+	&:after{
+		content: "\f0d7";
+		position: absolute;
+		top: 11px;
+		right: 10px;
+		color: #c4c4c4;
+		display: block;
+	}//after
+}//sel--arrow
+
+
+.require-field{
+	&:after{
+		content: "*";
+		color: $red;
+		padding: 0 5px;
+	}//after
+}//.require-field
+
+.info-form--col{
+	@include col(6);
+}//form--col
+
+
+.form-group--inline{
+	.field-group--month,.field-group--year{
+		@include col(3);
+	}//.field-group--month,.field-group--year
+
+	.field-group--month{
+		
+	}//field-group--month
+
+	.field-group--year{
+
+	}//field-group--year
+
+	.field-group--cvv{
+		@include col(3);
+		float: right;
+	}//field-group--cvv
+
+	@include clearfix;
+}//form-group--inline
+
+.form-title{
+	margin-bottom: 20px;
+}

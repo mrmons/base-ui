@@ -1,0 +1,88 @@
+
+//Global All class start with .btn--xxx
+.btn--{
+	&process,&success,&danger,&warn,&disable,&edit{
+		@extend %btnBox;
+	}
+
+	&process{
+		background-color: $blue;
+	}
+
+	&success{
+		background-color: $green;
+	}//s
+
+	&danger{
+		background-color: $red;
+	}//danger
+
+	&warn{
+		background-color: $orange;
+	}//warn
+
+	&disable{
+		background-color: $grey;
+	}//disable
+
+	// &edit{
+	// 	background-color: $grey;
+	// }//edit
+
+
+
+	&close{
+		@extend .fa;
+		&:before{
+			content: "\f00d";
+			color: $grey;
+			display: block;
+		}//before
+	}//close
+
+	&outline-arrow{
+		@extend %btnOutline;
+		
+		padding: 5px 30px 5px 15px;
+		position: relative;
+
+		&:before{
+			@extend .fa;
+			content: "\f0d7";
+			position: absolute;
+			top: 8px;
+			right: 10px;
+			color: #c4c4c4;
+			display: block;
+		}
+	}//edit-outline
+
+	&outline{
+		@extend %btnOutline;
+		text-align: center;
+	}//outline
+
+}//btn--
+
+.btn-expand{
+	position: absolute;
+	font-size: 2em;
+	bottom: 0px;
+	right: 0px;
+	padding: 15px;
+
+	//@extend .fa;
+
+	&:before{
+		content: "\f100";
+		width: 20px;
+		height: 20px;
+		display: block;
+	}
+
+	@include media(tablet) {
+		padding: 5px 20px;
+		bottom: 20px;
+	    right: 20px;
+	}
+}

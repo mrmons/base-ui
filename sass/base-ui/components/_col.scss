@@ -1,0 +1,18 @@
+// $total-columns
+
+.row{
+	@include row;
+}
+
+
+@for $i from 1 through $total-columns{
+	.col-#{$i}{
+		@include col($i);
+		padding: em(10px);
+		@include box-sizing;
+	}
+}
+
+.last{
+	margin-right: 0;
+}

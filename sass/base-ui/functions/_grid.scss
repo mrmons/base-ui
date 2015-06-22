@@ -1,0 +1,122 @@
+//Grid Framework
+
+$direction: right;   // Columns margin direction
+$gutter-store: $gutter; // Store the setting of the gutter;
+
+
+@function gutter($cols: $total-columns, $gutterNum:$gutter) {
+
+  $total-columns: $cols;
+
+  $container-width: $cols * ($max-width/$total-columns) + ($cols - 1) * $gutterNum;
+
+  @return percentage($gutterNum / $container-width);
+}
+
+@function columns($col, $total-cols: $total-columns, $gutterNum:$gutter) {
+
+  $total-columns: $total-cols;
+
+  $width: $max-width + ($gutterNum * ($total-columns - 1));
+  $grid: (($max-width/$total-columns) * $col) + ($gutterNum * ($col - 1));
+
+  @return ($grid / $width) * 100%;
+}
+
+// Grid Mixins
+
+@mixin row($width:100%){
+  @include clearfix;
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: block;
+}//row
+
+
+@mixin col($col, $total-cols: $total-columns, $gutterNum:$gutter){
+
+  $total-columns: $total-cols;
+  //$parent-columns: get-parent-columns($total-cols) !global;
+
+  width: columns($col, $total-cols,$gutterNum);
+  float: left;
+  margin-#{$direction}: gutter($total-cols,$gutterNum);
+  margin-bottom: gutter($total-cols,$gutterNum);
+       
+      
+  &:last-child{
+    margin-#{$direction}: 0;
+  }
+
+}//col
+
+@mixin subCols($num_child, $num_parent, $gutterNum:$gutter) {
+
+  $parent_size: (($max-width/$total-columns) * $num_parent) + ($gutterNum * ($num_parent - 1));
+  $child_size: (($max-width/$total-columns) * $num_child) + ($gutterNum * ($num_child - 1));
+
+  margin-#{$direction}: ($gutterNum / $parent_size) * 100%;
+  width: ($child_size / $parent_size) * 100%;
+  float: left;
+
+  &:last-child{
+    margin-#{$direction}: 0;
+  }
+}
+
+
+@mixin offset($col, $gutterNum: $gutter) {
+    margin-left: columns($col,$total-columns,$gutterNum)+gutter($total-columns,$gutterNum);
+}
+
+
+// .test-column{
+//   text-align: center;
+//   li{
+//     @include col(4);
+//     background-color: #ccc;
+//     opacity: 0.6;
+//   }
+// }
+
+// .nested{
+//   @include subCols(2,4);
+//   color: #fff;
+//   background-color: #0f0f0f;
+
+//   &:last-child{
+//     margin-right: 0;
+//   }
+// }
+
+
+
+
+// @function offset-columns($columns) {
+//   $margin: $columns * $column-width + $columns * $gutter-width;
+//   @return $margin;
+// }
+
+
+
+// @mixin offset($from-direction, $columns) {
+//   @if $from-direction == left {
+//     float: left;
+//     margin-left: offset-columns($columns);
+//   }
+//   @if $from-direction == right {
+//     float: right;
+//     margin-right: offset-columns($columns);
+//   }
+// }
+
+
+
+
+
+
+
+
+

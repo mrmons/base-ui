@@ -1,0 +1,64 @@
+.progress{
+	padding: 20px $sidebarSpacing;
+	display: none;
+
+	@include media(desktop) {
+		display: block;
+	}
+
+	.progress--title{
+		margin-bottom: 30px;
+	}
+}//.progress-container
+
+
+.progress-container{
+	position: relative;
+	margin-bottom: 30px;
+	width: 100%;
+
+	.progress--img{
+		@include border-radius(100%);
+		position: absolute;
+		left: 0;
+		width: 35px;
+		height: 35px;
+		display: block;
+	}
+
+	@include clearfix();
+
+}//.progress
+
+
+.progress-wrap{
+	display: block;
+	margin-left: 45px;
+	font-size: ms(-1);
+
+	.progress-wrap--title{
+		@include col(10);
+		margin: 0 0 8px 0;
+	}
+
+	.progress-wrap--num{
+		@include col(2);
+		text-align: right;
+	}
+}//.progress-wrap
+
+
+.progress-bar{
+	width: 100%;
+	background-color: #d3d3d3; //grey
+	display: block;
+	height: 6px;
+	float: left;
+	@include border-radius(1em);
+
+	.progress-bar--meter{
+		@extend .progress-bar;
+		background-color: #20a56e; //green
+		width: 50%;
+	}
+}//.progress-bar

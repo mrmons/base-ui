@@ -1,0 +1,48 @@
+html{
+	font-size: $ft-device;
+	font-family: $ft-primary;
+
+	@include media(tablet) {
+		font-size: map-deep-get($tiny-setup,fontSize);
+		//text-align: center;
+
+	}
+}
+
+body{ 
+	font-size: ms(0); 
+}
+
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $ft-primary;
+	font-weight: 300;
+	margin: em(20px) 0 em(10px);
+	line-height: 1.3;
+}
+
+
+h6{ 
+	font-size: ms(1); 
+}
+
+h5{ 
+	font-size: ms(2); 
+}
+
+h4{ 
+	font-size: ms(3); 
+}
+
+h3{ 
+	font-size: ms(4); 
+}
+
+h2{ 
+	font-size: ms(5); 
+}
+
+h1{ 
+	font-size: ms(6); 
+}
+
