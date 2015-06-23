@@ -1,3 +1,18 @@
+//Sidebar
+%sidebar{
+	@include box-sizing();
+	position: absolute;
+	transform: translate3d(0,0,0);
+	width: 50px;
+	z-index: 11;
+	height: 100%;
+	overflow: hidden;
+	@include media(desktop) {
+		width: $sidebarWidth;
+	}
+}//sidebar
+
+
 // Sidebar and side content setup
 
 .sidebar{

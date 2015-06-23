@@ -1,3 +1,16 @@
+%label{
+	width: 100px;
+	padding: 4px 10px;
+	background: none;
+	text-align: center;
+	border: 0;
+	color: $white;
+	display: block;
+	font-size: 0.9em;
+	@include border-radius(4px);
+}
+
+
 .label{
 
 	&-blue{

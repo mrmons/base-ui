@@ -8,14 +8,6 @@
 
 @charset "UTF-8";
 
-// Vendor
-//--------------------------------------------------------------------
-
-@import "functions/unit-converter",
-		"functions/modular-scale",
-		"functions/map";
-
-
 // Mixins 
 //--------------------------------------------------------------------
 @import "mixins/appearance",
@@ -33,21 +25,11 @@
 		"../setup/setup",
 		"../setup/presets";
 		
-
-// Placeholder 
-//--------------------------------------------------------------------
-@import "placeholders/button";
-@import "placeholders/placeholder";
-
-
-
 // Functions 
 //--------------------------------------------------------------------
 @import "functions/grid",
 		"functions/unit-converter",
 		"functions/modular-scale";
-
-
 
 // Componenets 
 //--------------------------------------------------------------------

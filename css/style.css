@@ -1837,40 +1837,6 @@ button {
 input[type="checkbox"].custom {
   display: none; }
 
-.label-blue, .label-green, .label-red, .label-orange {
-  width: 100px;
-  padding: 4px 10px;
-  background: none;
-  text-align: center;
-  border: 0;
-  color: #fff;
-  display: block;
-  font-size: 0.9em;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px; }
-
-.form-classic input[type="text"], .form-classic input[type="email"], .form-classic input[type="password"], .form-classic select[class*="sel--"] {
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 0.9em;
-  border: 1px solid #e9e9e9;
-  background-color: #fcfcfc; }
-
-.sidebar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  transform: translate3d(0, 0, 0);
-  width: 50px;
-  z-index: 11;
-  height: 100%;
-  overflow: hidden; }
-  @media only screen and (min-width: 1200px) {
-    .sidebar {
-      width: 280px; } }
-
 .l-container {
   max-width: 100%;
   margin-left: auto;
@@ -2333,6 +2299,13 @@ button[class^="btn--"] {
   .item-info--subcount {
     float: right; }
 
+.form-classic input[type="text"], .form-classic input[type="email"], .form-classic input[type="password"], .form-classic select[class*="sel--"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  border: 1px solid #e9e9e9;
+  background-color: #fcfcfc; }
+
 .form-classic input[type="text"], .form-classic input[type="email"], .form-classic input[type="password"] {
   width: 100%; }
   .form-classic input[type="text"].error, .form-classic input[type="email"].error, .form-classic input[type="password"].error {
@@ -2657,6 +2630,19 @@ button[class^="btn--"] {
       -webkit-border-radius: 100%;
       border-radius: 100%; }
 
+.label-blue, .label-green, .label-red, .label-orange {
+  width: 100px;
+  padding: 4px 10px;
+  background: none;
+  text-align: center;
+  border: 0;
+  color: #fff;
+  display: block;
+  font-size: 0.9em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
 .label-blue {
   background-color: #12a8df; }
 .label-green {
@@ -2876,6 +2862,20 @@ button[class^="btn--"] {
   .progress-bar .progress-bar--meter {
     background-color: #20a56e;
     width: 50%; }
+
+.sidebar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  width: 50px;
+  z-index: 11;
+  height: 100%;
+  overflow: hidden; }
+  @media only screen and (min-width: 1200px) {
+    .sidebar {
+      width: 280px; } }
 
 .sidebar {
   background-color: #26282a;
