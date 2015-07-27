@@ -1,0 +1,14 @@
+@mixin linear-gradient($color1, $color2){
+  background-image: -webkit-gradient($color1, $color2);
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:-webkit-linear-gradient($color1, $color2);
+
+  /* Firefox 3.6 - 15 */
+  background-image:-moz-linear-gradient($color1, $color2);
+
+  /* Opera 11.1 - 12 */
+  background-image:-o-linear-gradient($color1, $color2);
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image:linear-gradient($color1, $color2);
+}

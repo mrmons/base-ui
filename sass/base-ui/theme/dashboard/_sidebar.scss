@@ -1,0 +1,56 @@
+.sidebar{
+	@extend %sidebar;
+	background-color: #26282a; //sidebar color
+	color: $linkColor;
+	font-weight: 300;
+}//sidebar
+
+
+.sidebar-expand{
+	@extend .fa;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+	border-top: 1px solid darken($grey,50%);
+	color: darken($grey,40%);
+	background-color: #26282a;
+	@include box-sizing();
+	&:hover{
+		color: $white;
+		background-color: #2b2d2f;
+	}
+
+	&.open{
+		&:after{
+			content: "\f101";	//f100 <<   //f101 >>
+		}
+	}
+
+	&.close{
+		&:after{
+			content: "\f100";	//f100 <<   //f101 >>
+		}
+	}
+
+	&:after{
+		content: "\f101";
+		@include media(desktop) {
+			content: "\f100";
+		}
+
+		font-size: ms(2);
+		display: block;
+		border-top: 1px solid darken($grey,40%);
+		width: 100%;
+		text-align: right;
+		padding: 10px 20px;
+		cursor: pointer;
+		@include box-sizing();
+
+		@include media(desktop) {
+			content: "\f100";
+		}
+	}
+}//sidebar-expand

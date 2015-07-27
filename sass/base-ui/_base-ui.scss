@@ -1,14 +1,6 @@
-/*
- * Author: @mrmons
- * Date: 
- *
- * Url: https://github.com/mrmons/tiny-ui
- *
- */
-
 @charset "UTF-8";
 
-// Mixins 
+// Mixins
 //--------------------------------------------------------------------
 @import "mixins/appearance",
 		"mixins/background-size",
@@ -17,21 +9,33 @@
 		"mixins/box-sizing",
 		"mixins/transform",
 		"mixins/triangle",
+		"mixins/transition",
+		"mixins/gradient",
 		"mixins/media-queries";
 
-// Setup 
+
+// Setup
 //--------------------------------------------------------------------
-@import "../setup/colors-var",
-		"../setup/setup",
-		"../setup/presets";
-		
-// Functions 
+@import "setup/colors-var",
+		"setup/setup",
+		"setup/presets";
+
+
+// Functions
 //--------------------------------------------------------------------
 @import "functions/grid",
 		"functions/unit-converter",
 		"functions/modular-scale";
 
-// Componenets 
+
+// Themes
+//--------------------------------------------------------------------
+@import "theme/dashboard/header",
+		"theme/dashboard/sidebar",
+		"theme/dashboard/nav";
+
+
+// Componenets
 //--------------------------------------------------------------------
 @import "components/l-container",
 		"components/col",
@@ -45,11 +49,17 @@
 		"components/form",
 		"components/header",
 		"components/label",
-		"components/nav",
 		"components/pagination",
 		"components/progress",
 		"components/sidebar",
 		"components/table",
 		"components/tooltip",
 		"components/typography";
+
+
+// utils
+//--------------------------------------------------------------------
+@import "utils/helper",
+		"utils/responsive-visibility";
+
 

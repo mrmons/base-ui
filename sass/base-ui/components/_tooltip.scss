@@ -20,3 +20,12 @@
 		@include triangle(left,8px,8px,$black);
 	}
 }
+
+.creditcard-tooltip{
+	background-color: $grey;
+	color: $white;
+	padding: 1px 7px;
+	font-size: ms(-1);
+	@include border-radius(100%);
+	cursor: pointer;
+}//.creditcard-tooltip

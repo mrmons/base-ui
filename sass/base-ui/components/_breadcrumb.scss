@@ -2,7 +2,7 @@
 	font-size: ms(4);
 	margin: 1.42857em 0 2em 0;
 	.breadcrumb--title{
-		
+
 		float: none;
 
 		@include media(desktop) {
@@ -10,7 +10,7 @@
 		}
 
 		a{
-			//@extend .fa; 
+			@extend .fa;
 			display: block;
 
 			&:after{
@@ -20,6 +20,7 @@
 
 			@include media(desktop) {
 				display: inline;
+
 				&:after{
 					content: "\f105";
 					padding: 0 20px;
@@ -32,6 +33,7 @@
 		float: none;
 		margin-top: 30px;
 		font-size: ms(-4);
+		text-transform: uppercase;
 		@include media(desktop) {
 			float: right;
 			margin-top: 3px;

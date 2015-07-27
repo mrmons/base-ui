@@ -1,0 +1,103 @@
+// Responsive visibility
+
+.is-mobile{
+	display: none;
+	@include media(mobile) {
+		.is-tablet, .is-desktop{display: none;}
+		.is-mobile{display: inline;}
+	}//mobile
+}
+
+
+@include media(mobile) {
+
+	.is-tablet, .is-desktop{
+		display: none;
+	}
+
+	.is-mobile{
+		display: inline;
+	}
+}//mobile
+
+@include media(mobile,portrait) {
+
+	.is-tablet, .is-desktop,.is-mobile--landscape{
+		display: none;
+	}
+
+	.is-mobile--portrait{
+		display: inline;
+	}
+}
+
+@include media(mobile,landscape) {
+
+	.is-tablet, .is-desktop,.is-mobile-portrait{
+		display: none;
+	}
+
+	.is-mobile-landscape{
+		display: inline;
+	}
+}
+
+
+@include media(tablet) {
+	.is-mobile, .is-desktop{
+		display: none;
+	}
+
+
+	.is-tablet{
+		display: inline;
+	}
+}
+
+@include media(desktop) {
+
+	.is-tablet, .is-mobile{
+		display: none;
+	}
+
+	.is-desktop{
+		display: inline;
+	}
+}
+
+
+
+
+.is-responsive{
+	display: block;
+	padding: 50px;
+	background-color: blue;
+
+
+
+	@include media(tablet) {
+		background-color: red;
+	}
+
+	@include media(dekstop) {
+		background-color: green;
+	};
+
+}
+
+
+.is-retina{
+	@include media(desktop) {
+		background-color: green;
+	}
+
+	@include media(tabletOnly) {
+		background-color: blue;
+	}
+
+	@include media(retina) {
+		background-color: #aba000;
+	}
+}
+
+

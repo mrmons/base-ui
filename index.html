@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -9,6 +9,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
 
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="js/vendor/selectivizr-min.js"></script>
+
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -16,33 +19,54 @@
 <body>
 
 
-<section>	
+<main class="l-container">
 
 	<header class="header">
-		lorem
+		<a href="/home" class="logo">
+		   <img alt="logo name" src="logodirectory">
+		</a>
+
+		<ul class="main-nav">
+			<li><a href="#" class="btn-search js-popup"></a></li>
+		    <li><a href="#" class="btn-logout"></a></li>
+		    <li>
+		    	<a href="#" class="btn-profile">
+		    		<img alt="29-cropped" class="avatar profile-img" id="avatar-thumb" src="http://lorempixel.com/203/120/">
+				</a>
+			</li>
+		</ul>
 	</header><!-- /header -->
 
-	<aside class="sidebar">
-		<ul>
-			<li>item 1</li>
-			<li>item 2</li>
-			<li>item 3</li>
-			<li>item 4</li>
-			<li>item 5</li>
-			<li>item 6</li>
+	<aside class="sidebar js-sidebar">
+		<ul class="nav">
+			<li><a class="btn-dashboard" href="#"><span>item-name 1</span></a></li>
+			<li><a class="btn-activity" href="#"><span>item-name 2</span></a></li>
+			<li><a class="btn-order" href="#"><span>item-name 3</span></a></li>
+			<li><a class="btn-shipment" href="#"><span>item-name 4</span></a></li>
+			<li><a class="btn-rewards" href="#"><span>item-name 5</span></a></li>
+			<li><a class="btn-settings" href="#"><span>item-name 6</span></a></li>
 		</ul>
+
+		<div class="js-expand sidebar-expand"></div>
 	</aside>
 
-	<article class="content">
-		content
+	<article class="content js-content">
+		<section class="l-content-fix p-profile form-details">
+			<h2>No fix 100%</h2>
+		</section>
+
+
+		<section class="l-content-fix">
+			<h2>Max-width 1024px</h2>
+		</section>
 	</article>
 
-</section>
+</main>
 
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
-<script src="js/vendor/selectivizr-min.js"></script>
+
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="js/vendor/velocity.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,19 @@
+[class*="btn--"]{
+	font-family: $ft-primary;
+	font-size:  $ft-base;
+	min-width: 100px;
+	min-height: 1px;
+	display: inline-block;
+	//border-radius: 4px;
+	//border: none;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: no-wrap;
+}
+
+
 %btnOutline{
 	color: $black;
 	border: 1px solid $grey;
@@ -19,10 +35,7 @@
 	@include border-radius(4px);
 }//%btnBox
 
-button[class^="btn--"]{
-	font-family: $ft-primary;
-	font-size:  $ft-base;
-}
+
 
 
 //Global All class start with .btn--xxx
@@ -51,10 +64,6 @@ button[class^="btn--"]{
 		background-color: $grey;
 	}//disable
 
-	// &edit{
-	// 	background-color: $grey;
-	// }//edit
-
 	&close{
 		@extend .fa;
 		&:before{
@@ -66,7 +75,7 @@ button[class^="btn--"]{
 
 	&outline-arrow{
 		@extend %btnOutline;
-		
+
 		padding: 5px 30px 5px 15px;
 		position: relative;
 

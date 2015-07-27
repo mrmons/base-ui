@@ -1,0 +1,59 @@
+.logo-mv{
+	max-width: 185px;
+	width: 100%;
+
+
+	img{
+		max-width: 185px;
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}//logo-mv
+
+.bar-alert{
+	padding: 10px 15px;
+	color: #fff;
+	background-color: #f91a1b;
+	margin-bottom: 20px;
+
+	.btn-close{
+		float: right;
+		color: $black;
+		cursor: pointer;
+	}
+
+	@include clearfix;
+}
+
+.divider{
+	&--line{
+		border-bottom: 1px solid lighten($grey,20%);
+		display: block;
+	}
+}
+
+.subtitle{
+	color: $grey;
+}
+
+.is-txt-left{
+	text-align: left !important;
+}
+
+.is-txt-center{
+	text-align: center;
+}
+
+.is-txt-right{
+	text-align: right;
+}
+
+
+.is-divide--line{
+	border-top: 1px solid $grey;
+}
+
+
+
+
