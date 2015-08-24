@@ -18,12 +18,11 @@
 
 <body>
 
-
 <main class="l-container">
 
 	<header class="header">
 		<a href="/home" class="logo">
-		   <img alt="logo name" src="logodirectory">
+		   <img alt="logo name" src="">
 		</a>
 
 		<ul class="main-nav">
@@ -50,14 +49,65 @@
 		<div class="js-expand sidebar-expand"></div>
 	</aside>
 
-	<article class="content js-content">
+	<article class="js-content side-content">
 		<section class="l-content-fix p-profile form-details">
+
 			<h2>No fix 100%</h2>
+
+			<div class="breadcrumb">
+		      <span class="breadcrumb--title">
+		        <a class="btn-dashboard" href="#">PageA</a>
+		        CurrentPage
+		      </span>
+		    </div>
+
+			<a class="btn--process" href="#">Button</a>
+			<a class="btn-outline--process" href="#">Button</a>
 		</section>
 
 
 		<section class="l-content-fix">
 			<h2>Max-width 1024px</h2>
+
+			<select class="js-select2" multiple="multiple">
+				<option value="AA">Lorem ipsum dolor sit amet</option>
+				<option value="BB">B</option>}
+			</select>
+		</section>
+
+		<section class="l-content">
+			<div class="table-data">
+	      <table>
+	        <thead>
+	          <tr>
+	            <th style="width:20%">order number</th>
+	            <th style="width:20%">date of purchase</th>
+	            <th style="width:20%">payment status</th>
+	            <th style="width:20%">payment method</th>
+	            <th style="width:15%">amount paid</th>
+	            <th style="width:15%">actions</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr>
+			      <td style="width:15%">number</td>
+			      <td style="width:15%">created at</td>
+			      <td style="width:15%"><span class="label--aaa">Order line</span></td>
+			      <td style="width:15%">paymentmethod</td>
+			      <td style="width:20%">number to currency</td>
+			      <td style="width:20%">
+			        <a data-dropdown="order_number_111" class="js-btn-popup btn--outline-arrow">Edit</a>
+
+			        <!-- popup Content START-->
+			          <div id="order_number_aaa" class="js-noclick js-box-order box-order">
+			          	<a href="">view order</a>
+			          </div>
+			        <!-- popup Content END-->
+			      </td>
+			    </tr>
+	        </tbody>
+	      </table>
+	    </div>
 		</section>
 	</article>
 
@@ -65,8 +115,15 @@
 
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 <script src="js/vendor/velocity.min.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript">
+	$('.js-select2').select2({
+		tags: true,
+		tokenSeparators: [',', ' ']
+	});
+	</script>
 
 </body>
 </html>

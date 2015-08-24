@@ -28,13 +28,6 @@
 		"functions/modular-scale";
 
 
-// Themes
-//--------------------------------------------------------------------
-@import "theme/dashboard/header",
-		"theme/dashboard/sidebar",
-		"theme/dashboard/nav";
-
-
 // Componenets
 //--------------------------------------------------------------------
 @import "components/l-container",
@@ -54,7 +47,8 @@
 		"components/sidebar",
 		"components/table",
 		"components/tooltip",
-		"components/typography";
+		"components/typography",
+		"components/select2";
 
 
 // utils
@@ -62,4 +56,10 @@
 @import "utils/helper",
 		"utils/responsive-visibility";
 
+
+// Themes
+//--------------------------------------------------------------------
+@import "theme/dashboard/header",
+		"theme/dashboard/sidebar",
+		"theme/dashboard/nav";
 

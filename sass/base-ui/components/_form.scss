@@ -395,6 +395,9 @@ input[type='checkbox']:checked + label span.checkbox-round{
 	&--success{
 		border-color: $green;
 		color: $green;
+		.btn-close{
+			color: $green;
+		}
 	}
 }
 

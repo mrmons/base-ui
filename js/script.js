@@ -18,7 +18,7 @@ $(document).ready(function() {
 	fadeOffTimer(".js-fadeoff");		//Fade off effect with timer
 	fadeOffButton(".js-alert");			//Fade off effect once click
 	adjustHeight(".js-sidebar",".js-content");   // to extend object height equal to the viewport height
-	$( ".js-calendar" ).datepicker();
+	//$( ".js-calendar" ).datepicker();
 
 });
 
