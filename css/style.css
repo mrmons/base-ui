@@ -2060,7 +2060,7 @@
   padding: 6px; }
 
 .select2-container--classic .select2-selection--single {
-  background-color: #f6f6f6;
+  background-color: #f7f7f7;
   border: 1px solid #aaa;
   border-radius: 4px;
   outline: 0;
@@ -3442,6 +3442,12 @@ h1 {
 
 .subtitle {
   color: #b7b7b7; }
+
+.is-center {
+  margin: 0 auto; }
+
+.is-txt-center {
+  text-align: center; }
 
 .is-txt-left {
   text-align: left !important; }
