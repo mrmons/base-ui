@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<title>Base-ui</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
+
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="js/vendor/selectivizr-min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<main class="l-container">
+
+	<header class="header">
+		<a href="/home" class="logo">
+		   <img alt="logo name" src="">
+		</a>
+
+		<ul class="main-nav">
+			<li><a href="#" class="btn-search js-popup"></a></li>
+		    <li><a href="#" class="btn-logout"></a></li>
+		    <li>
+		    	<a href="#" class="btn-profile">
+		    		<img alt="29-cropped" class="avatar profile-img" id="avatar-thumb" src="http://lorempixel.com/203/120/">
+				</a>
+			</li>
+		</ul>
+	</header><!-- /header -->
+
+
+</main>
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+<script src="js/vendor/velocity.min.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">
+	$('.js-select2').select2({
+		tags: true,
+		tokenSeparators: [',', ' ']
+	});
+	</script>
+
+</body>
+</html>
